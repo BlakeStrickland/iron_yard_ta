@@ -21,6 +21,11 @@ while keep_going
     input = gets.chomp
     counter += 1
 
+    if input.to_s.to_f == 0.0 && input != ""
+      puts "That is not a number"
+      puts "Exiting"
+      keep_going = false
+    end
 
   elsif input.to_s.to_f == 0.0 && input != ""
     word_array << input
@@ -31,6 +36,11 @@ while keep_going
     input = gets.chomp
     counter += 1
 
+    if input.to_s.to_f != 0.0 && input != ""
+      puts "That is not a word"
+      puts "Exiting"
+      keep_going = false
+    end
 
   else
     puts "Start over"
