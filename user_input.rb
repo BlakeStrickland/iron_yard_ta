@@ -1,6 +1,6 @@
 puts "Enter a number or string"
 input = gets.chomp
-counter = 0
+counter = 1
 number_array = []
 word_array = []
 
@@ -12,6 +12,7 @@ while input
 
     puts "Full array: #{number_array}"
     puts "Total: #{number_total}"
+    puts "Count: #{counter}"
     puts "Average: #{number_average}"
 
     puts "Enter another number"
@@ -20,7 +21,7 @@ while input
     counter += 1
 
 
-  elsif input.to_s.to_f == 0.0 && input != ""
+  elsif input.to_f.to_s == 0.0 && input != ""
     word_array << input
     puts "#{word_array}"
     total_words = word_array.join("")
