@@ -1,20 +1,37 @@
-puts "Enter a number"
-number = gets.chomp
-counter = 1
+puts "Enter a number or string"
+input = gets.chomp
+counter = 0
 number_array = []
-while number != "\n" && number.to_s.to_f != 0.0
+word_array = []
 
-  number_array << number.to_f
-  number_total = number_array.reduce:+
-  number_average = number_total / counter
+while input
+  if input.to_s.to_f != 0.0 && input != ""
+    number_array << input.to_f
+    number_total = number_array.reduce:+
+    number_average = number_total / counter
 
-  puts "#{number_array}"
-  puts "#{number_total}"
-  puts "#{number_average}"
+    puts "Full array: #{number_array}"
+    puts "Total: #{number_total}"
+    puts "Average: #{number_average}"
 
-  puts "Enter another number"
-  number = gets.chomp
-  number = number.to_f
+    puts "Enter another number"
+    input = gets.chomp
+    input = input.to_f
+    counter += 1
 
-  counter += 1
+
+  elsif input.to_s.to_f == 0.0 && input != ""
+    word_array << input
+    puts "#{word_array}"
+    total_words = word_array.join("")
+    puts "#{total_words}"
+    puts "Enter another string"
+    input = gets.chomp
+    counter += 1
+
+
+  else
+    puts "Start over"
+    exit
+  end
 end
