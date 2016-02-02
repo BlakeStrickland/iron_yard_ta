@@ -3,9 +3,11 @@ input = gets.chomp
 counter = 1
 number_array = []
 word_array = []
-
-while input
-  if input.to_s.to_f != 0.0 && input != ""
+keep_going = true
+while keep_going
+  if input == ""
+    keep_going = false
+  elsif input.to_s.to_f != 0.0 && input != ""
     number_array << input.to_f
     number_total = number_array.reduce:+
     number_average = number_total / counter
@@ -17,11 +19,10 @@ while input
 
     puts "Enter another number"
     input = gets.chomp
-    input = input.to_f
     counter += 1
 
 
-  elsif input.to_f.to_s == 0.0 && input != ""
+  elsif input.to_s.to_f == 0.0 && input != ""
     word_array << input
     puts "#{word_array}"
     total_words = word_array.join("")
