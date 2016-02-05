@@ -1,3 +1,12 @@
+class CurrencyConverter
+  def initialize()
+    #dont do this
+    @hash = {:USD => 1.00, :YIN => 120, :EUR => 0.9}
+    #pass it in as a parameter to the initialize
+  end
+end
+
+
 class Weight
   def initialize(amount, unit)
     @amount = amount
