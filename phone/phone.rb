@@ -17,10 +17,10 @@ class Phone
   end
 
 end
-#
-# android = Phone.new("Motorola", "Driod Maxx", ["Macarena", "Chicken Dance"])
-# galaxy = Phone.new("Samsung", "Galaxy S6", "Motzart's 6th")
-# puts android.get_info
-# puts galaxy.get_info
-#
-# android.ring
+
+android = Phone.new("Motorola", "Driod Maxx", ["Macarena", "Chicken Dance"])
+galaxy = Phone.new("Samsung", "Galaxy S6", "Motzart's 6th")
+puts android.get_info
+puts galaxy.get_info
+
+android.ring
