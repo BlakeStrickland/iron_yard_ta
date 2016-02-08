@@ -24,6 +24,10 @@ class Weight
   def amount
     @amount
   end
+
+  def *(factor)
+
+  end
 end
 
 
@@ -31,6 +35,8 @@ a = Weight.new(2, :lbs)
 b = Weight.new(3, :lbs)
 
 c = a + b
+d = a * 2
+e = a * 2.0
 
 puts "TOTAL: #{c}"
 puts "a: #{a}"
